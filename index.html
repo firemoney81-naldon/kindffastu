@@ -1,23 +1,639 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://yourdomain.com/jeep-wrangler-maintenance-cost"
+      },
+      "headline": "Jeep 랭글러 유지비 상세 분석: 2026년 기준 완벽 가이드",
+      "description": "2026년 최신 Jeep 랭글러 유지비 가이드. 사하라와 루비콘 모델의 연비, 보험료, 세금, 정비 비용 등을 비교 분석하여 투명한 유지 비용 견적을 제시합니다.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/image/wrangler-main-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "카리포트 분석팀",
+        "url": "https://yourdomain.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Car Maintenance Guide Korea",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/image/logo.png"
+        }
+      },
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-04-01",
+      "keywords": "랭글러 유지비, 랭글러 연비, 랭글러 보험료, 랭글러 세금, 랭글러 정비 비용, 랭글러 가격, 랭글러 장점, 랭글러 단점, 랭글러 사하라, 랭글러 루비콘, 랭글러 4xe, 랭글러 견적, 랭글러 비교, 랭글러 오일 교환 비용, 랭글러 타이어 가격, 랭글러 전문 업체, 랭글러 부품 가격, 지프 랭글러 유지보수"
+    }
+  </script>
+
+  <!-- CSS Styles -->
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-color: #f7f9fc; /* 부드러운 배경색 */
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50; /* 진한 회색조 */
+      color: white;
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+      position: relative;
+    }
+    nav a:hover, nav a:focus {
+      color: #f39c12; /* 오렌지 포인트색 */
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      background-color: white;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+    }
+    h2, h3 {
+      color: #34495e; /* 진한 회색조 */
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 0.8rem;
+      margin-top: 3rem;
+      font-weight: 700;
+    }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    p {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    strong {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background-color: #fcfcfc;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #ecf0f1;
+      color: #34495e;
+      font-weight: 700;
+    }
+    td strong {
+      color: #d35400; /* 오렌지 강조색 */
+    }
+    dl dt {
+      font-weight: 700;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      color: #2980b9; /* 파란색 링크 */
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    dl dt:hover {
+      color: #1a5276;
+    }
+    dl dd {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: none;
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    dl dt.active + dd {
+      display: block;
+    }
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 3rem auto;
+      background-color: #e67e22; /* 주황색 CTA */
+      color: white;
+      font-weight: 700;
+      padding: 1.5rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(230, 126, 34, 0.3);
+      font-size: 1.1rem;
+    }
+    .cta-button:hover {
+      background-color: #d35400;
+      transform: translateY(-4px);
+    }
+    .keyword-tags {
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .keyword-tags a {
+      background-color: #ecf0f1; /* 부드러운 회색 */
+      color: #34495e;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .keyword-tags a:hover {
+      background-color: #bdc3c7;
+      color: #2c3e50;
+    }
+    .external-links {
+      margin: 2rem 0;
+    }
+    .external-links a {
+      color: #2980b9;
+      text-decoration: underline;
+      margin-right: 20px;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .external-links a:hover {
+      color: #1a5276;
+    }
+    footer {
+      text-align: center;
+      padding: 3rem;
+      font-size: 0.9rem;
+      color: #777;
+      background-color: #e9ecef;
+      margin-top: 4rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    /* Simple chart visualization */
+    .chart-container {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: #fefefe;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      height: 200px; /* Chart height */
+      position: relative;
+    }
+    .bar {
+      background-color: #2ecc71; /* Green bar color */
+      margin-bottom: 5px;
+      transition: width 0.5s ease;
+      position: relative;
+      border-radius: 4px;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 30px;
+      font-size: 0.9rem;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .bar-label {
+      width: 150px;
+      text-align: left;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .input-form {
+      background-color: #fcfcfc;
+      border: 1px solid #ddd;
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+    .input-form input, .input-form select {
+      width: calc(100% - 20px);
+      padding: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    .input-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #34495e;
+    }
+    .input-form button {
+      background-color: #e67e22;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    .input-form button:hover {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jeep 랭글러 유지비 상세 분석: 2026년 완벽 가이드</h1>
+    <p>사하라, 루비콘, 랭글러 4xe 모델별 투명한 비용 견적과 장단점 비교</p>
+    <nav aria-label="메인 메뉴">
+      <ul>
+        <li><a href="#intro">개요</a></li>
+        <li><a href="#cost-factors">유지비 구성요소</a></li>
+        <li><a href="#maintenance">정기 정비 비용</a></li>
+        <li><a href="#compare">모델별 비교</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#contact">견적/문의</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Jeep 랭글러, 꿈의 오프로더를 소유하기 위한 현실적인 비용 분석 💰</h2>
+      <p>강인한 오프로드 성능과 독특한 디자인으로 수많은 드라이버의 로망인 Jeep 랭글러. 랭글러는 단순히 이동 수단을 넘어 모험과 자유를 상징하는 아이콘입니다. 하지만 높은 매력만큼이나 <strong>랭글러 유지비</strong>에 대한 궁금증과 우려도 많습니다. 특히 <strong>랭글러 사하라</strong>나 <strong>랭글러 루비콘</strong> 같은 인기 모델을 구매하기 전, 실제 소유 비용을 정확히 파악하는 것이 중요합니다. 이 가이드는 2026년 최신 정보를 바탕으로 랭글러의 연비, 보험료, 세금, 정비 비용 등을 종합적으로 분석하여 투명한 <strong>랭글러 유지비 견적</strong>을 제시합니다. 더 나아가 최근 주목받는 하이브리드 모델인 <strong>랭글러 4xe</strong>의 유지비 차이점까지 심층적으로 비교하여 예비 오너의 현명한 선택을 돕고자 합니다.</p>
+
+      <div class="keyword-tags" aria-label="연관 키워드">
+        <a href="#cost-factors">랭글러 유지비 계산</a>
+        <a href="#cost-factors">랭글러 연비</a>
+        <a href="#cost-factors">랭글러 보험료</a>
+        <a href="#maintenance">랭글러 정비 비용</a>
+        <a href="#compare">랭글러 사하라 루비콘 비교</a>
+        <a href="#compare">랭글러 4xe 유지비</a>
+        <a href="#intro">랭글러 장단점</a>
+        <a href="#cost-factors">랭글러 감가상각</a>
+        <a href="#maintenance">랭글러 타이어 가격</a>
+      </div>
+    </section>
+
+    <section id="image-section">
+      <h3>Jeep 랭글러, 오프로드의 상징</h3>
+      <figure>
+        <img src="https://images.pexels.com/photos/1124449/pexels-photo-1124449.jpeg" alt="오프로드를 달리는 Jeep 랭글러 이미지">
+        <figcaption>Jeep 랭글러는 강력한 성능과 독보적인 디자인으로 사랑받습니다. (Image Source: Pexels.com)</figcaption>
+      </figure>
+    </section>
+
+    <section id="cost-factors">
+      <h2>Jeep 랭글러 유지비의 주요 구성요소 상세 분석</h2>
+      <p><strong>랭글러 유지비</strong>는 단순히 기름값만으로 결정되지 않습니다. 차량 구매 후 발생하는 모든 비용을 종합적으로 고려해야 합니다. 랭글러 오너가 정기적으로 지출하는 비용은 크게 네 가지 요소로 나뉩니다. 각 요소별 특징을 이해하면 <strong>랭글러 유지비 예상 금액</strong>을 더 정확하게 파악할 수 있습니다.</p>
+
+      <h3>1. 유류비 (연비 및 운행 습관)</h3>
+      <p><strong>Jeep 랭글러</strong>는 정통 오프로드 차량으로 설계되었기 때문에 일반적인 도심형 SUV에 비해 <strong>연비</strong>가 낮은 편입니다. 랭글러 사하라와 루비콘의 공인 연비(복합 기준)는 8~9km/L 수준이며, 4xe 모델의 경우 플러그인 하이브리드(PHEV) 특성상 전기 주행 거리를 활용하면 도심 연비는 훨씬 좋아집니다. 하지만 장거리 고속도로 주행이나 오프로드 환경에서는 연비가 급격히 하락할 수 있습니다. <strong>연비 차이점</strong>을 정확히 알고 구매해야 매달 지출하는 <strong>유류비 예상 비용</strong>을 현실적으로 계산할 수 있습니다.</p>
+      <div class="chart-container">
+        <h3>모델별 연비 및 유류비 비교 (2026년 기준)</h3>
+        <p>1년 주행 거리 15,000km, 휘발유 리터당 1,800원 기준 (단순 계산)</p>
+        <table>
+          <thead>
+            <tr>
+              <th>모델</th>
+              <th>공인 복합 연비 (km/L)</th>
+              <th>1년 예상 유류비 (약)</th>
+              <th>주요 특징</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>랭글러 사하라/루비콘 (가솔린)</td>
+              <td>8.0 ~ 8.5</td>
+              <td>약 318만 원 ~ 337만 원</td>
+              <td>정통 4륜 구동, 오프로드 특화</td>
+            </tr>
+            <tr>
+              <td>랭글러 4xe (PHEV)</td>
+              <td>9.5 ~ 10.0 (EV 주행 포함)</td>
+              <td>약 270만 원 ~ 300만 원 (전기 충전 비용 제외)</td>
+              <td>친환경성, 초기 비용 높음</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2. 자동차세 및 보험료</h3>
+      <p>랭글러의 배기량(일반적으로 2.0L 터보 엔진)에 따라 <strong>자동차세</strong>가 결정됩니다. 2026년 기준 2,000cc 차량의 연간 자동차세는 대략 52만 원 내외입니다. <strong>보험료</strong>는 운전자의 나이, 경력, 사고 이력, 자차 금액 등에 따라 크게 달라집니다. 특히 랭글러는 차량 가격이 높고 사고 시 부품 값이 비싸기 때문에 일반 승용차 대비 보험료가 높게 책정될 수 있습니다. <strong>보험료 저렴한 곳</strong>을 찾기 위해 여러 보험사의 <strong>랭글러 보험 견적 비교</strong>가 필수적입니다. <strong>내돈내산 후기</strong>를 참고하여 <strong>신규 가입 혜택</strong>이나 <strong>할인</strong> 옵션을 찾아보는 것도 좋습니다.</p>
+
+      <h3>3. 정기 정비 및 소모품 비용</h3>
+      <p><strong>랭글러 유지비</strong>에서 가장 큰 부분을 차지하는 것 중 하나는 정기적인 정비입니다. 랭글러는 구조적으로 오프로드 주행에 적합하도록 설계되었기 때문에 일반적인 차량보다 소모품의 교체 주기가 짧거나 비용이 비싼 경우가 있습니다. 특히 <strong>랭글러 타이어 가격</strong>은 일반 SUV 타이어보다 훨씬 비싸며, 오프로드 타이어는 마모 속도도 빠릅니다. <strong>랭글러 전문 업체</strong>를 이용할 경우 정품 부품 대신 대체 부품을 사용하여 <strong>비용 절감</strong>이 가능할 수 있습니다.</p>
+
+      <h3>4. 예기치 않은 수리 및 감가상각</h3>
+      <p>랭글러는 강인하지만, 오프로드 주행을 자주 하는 경우 차량 하부 손상이나 부품 고장이 발생할 가능성이 있습니다. <strong>랭글러 부품 가격</strong>이 수입차 중에서도 높은 편이기 때문에 수리 시 <strong>예상 비용</strong>을 꼼꼼히 체크해야 합니다. 또한 <strong>랭글러 감가상각</strong>은 모델과 연식에 따라 다르지만, 랭글러 자체의 인기가 높아 타 수입차 대비 비교적 감가상각이 적은 편이라는 장점도 있습니다.</p>
+    </section>
+
+    <section id="maintenance">
+      <h2>필수 소모품 정기 교체 비용 상세 가이드</h2>
+      <p>랭글러의 소모품 교체 주기는 운전 환경에 따라 달라지지만, 평균적인 주기를 바탕으로 <strong>정비 비용 견적</strong>을 미리 예측할 수 있습니다. <strong>랭글러 정비 비용</strong>은 공식 서비스센터와 일반 <strong>랭글러 전문 업체</strong> 간에 차이가 있을 수 있습니다. <strong>저렴한 곳</strong>을 찾고자 할 때는 서비스의 질과 정품 부품 사용 여부를 반드시 확인해야 합니다. <strong>디시</strong>나 <strong>네이버 카페</strong> 등 온라인 커뮤니티에서 <strong>내돈내산 후기</strong>를 참고하여 <strong>가입</strong> 시 제공되는 <strong>할인</strong> 혜택을 찾아보는 것도 현명한 방법입니다.</p>
+
+      <h3>1. 엔진 오일 및 필터 교체 (1회 평균 금액)</h3>
+      <p>엔진 오일 교환은 랭글러 유지보수의 기본입니다. <strong>랭글러 오일 교환 비용</strong>은 일반 차량 대비 약간 높은 수준입니다. 특히 랭글러 4xe 모델의 경우 하이브리드 시스템 특성상 전용 오일과 필터를 사용하는 것이 권장됩니다.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>소모품</th>
+            <th>권장 교체 주기</th>
+            <th>1회 평균 비용 (공식 센터 기준)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>엔진 오일 및 필터</td>
+            <td>10,000 km 또는 1년</td>
+            <td>18만 원 ~ 25만 원</td>
+            <td>오일 종류, 모델(가솔린/4xe)에 따라 상이</td>
+          </tr>
+          <tr>
+            <td>에어 필터, 에어컨 필터</td>
+            <td>10,000 ~ 15,000 km</td>
+            <td>5만 원 ~ 10만 원</td>
+            <td>필터 2종 동시 교체 시 비용 증가</td>
+          </tr>
+          <tr>
+            <td>미션 오일</td>
+            <td>50,000 ~ 60,000 km</td>
+            <td>40만 원 ~ 60만 원</td>
+            <td>4륜 구동 특성상 주기적인 점검 필요</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2. 타이어 교체 비용</h3>
+      <p>랭글러의 <strong>타이어 가격</strong>은 유지비에서 가장 큰 <strong>예상 비용</strong> 중 하나입니다. 랭글러는 모델에 따라 32인치 이상의 대형 오프로드 타이어가 장착되며, <strong>랭글러 루비콘</strong> 모델은 특히 험지 주행에 특화된 타이어를 사용합니다. <strong>랭글러 타이어 가격 비교</strong> 시, 일반 타이어 대비 30~50% 높은 <strong>금액</strong>이 발생할 수 있습니다. <strong>저렴한 곳</strong>을 찾으려면 수입 타이어 전문점을 방문하거나 <strong>할인</strong> 행사를 이용하는 것이 좋습니다. <strong>내돈내산 후기</strong>를 보면 타이어 교체로 인해 <strong>랭글러 유지비</strong>가 크게 늘어나는 것을 확인할 수 있습니다.</p>
+
+      <h3>3. 브레이크 패드 및 배터리 교체</h3>
+      <p>랭글러는 무거운 차체와 강력한 엔진 출력을 제어하기 위해 튼튼한 브레이크 시스템을 갖추고 있습니다. 브레이크 패드 교체 주기는 운전 습관에 따라 다르지만, 일반적인 차량보다 조금 더 빨리 마모될 수 있습니다. <strong>랭글러 배터리 가격</strong>은 일반 차량보다 비싸며, 특히 랭글러 4xe 모델은 고전압 배터리와 일반 배터리가 모두 장착되어 유지보수 비용이 더 높을 수 있습니다. <strong>AI</strong> 기반의 부품 <strong>가격 비교</strong> 서비스를 통해 <strong>싼곳</strong>을 찾는 것도 좋은 방법입니다. <strong>제미나이</strong>나 <strong>ChatGPT</strong> 같은 <strong>AI</strong> 플랫폼에 <strong>랭글러 부품 가격</strong>을 문의하여 <strong>예상 금액</strong>을 파악하는 사용자들도 늘어나고 있습니다.</p>
+
+      <h3>4. 랭글러 4xe 모델의 추가 유지비 요소</h3>
+      <p><strong>랭글러 4xe</strong>는 친환경 차량이지만, 내연기관 모델과 다른 추가 유지보수 항목이 있습니다. 고전압 배터리 관리 시스템 점검, 전기 모터 관련 정비 등은 일반 랭글러에서는 발생하지 않는 비용입니다. <strong>랭글러 4xe 유지비</strong>를 계산할 때는 전기 충전 비용과 함께 이와 같은 특수 부품의 장기적인 내구성을 고려해야 합니다. 초기 <strong>가입</strong> 시 제공되는 <strong>신규 가입 혜택</strong>이나 보증 기간 연장 <strong>상품</strong>을 활용하면 장기적인 <strong>비용 절감</strong>이 가능할 수 있습니다.</p>
+    </section>
+
+    <section id="compare">
+      <h2>모델별 랭글러 유지비 비교: 사하라 vs 루비콘 vs 4xe</h2>
+      <p>랭글러는 크게 사하라, 루비콘, 랭글러 4xe 세 가지 모델로 나뉩니다. 각 모델은 <strong>장단점</strong>이 명확하며, 이로 인해 <strong>유지비 차이점</strong>도 발생합니다. <strong>랭글러 루비콘</strong>은 극한의 오프로드 주행을 위해 설계되었기 때문에 <strong>랭글러 사하라</strong> 모델보다 더 견고한 부품과 험지용 타이어를 기본 장착합니다. 따라서 <strong>루비콘 유지비</strong>가 사하라 모델보다 약간 더 높을 수 있습니다. <strong>랭글러 4xe</strong>는 초기 구매 비용은 높지만, 도심 위주 주행 시 유류비 절감 효과가 커서 장기적인 <strong>유지비</strong> 측면에서는 <strong>장점</strong>이 있습니다.</p>
+
+      <h3>랭글러 모델별 유지비 비교 분석표 (2026년 기준)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>랭글러 사하라</th>
+            <th>랭글러 루비콘</th>
+            <th>랭글러 4xe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>모델 특징</td>
+            <td>도심과 오프로드의 조화, 편안한 승차감</td>
+            <td>최상위 오프로드 성능, 강력한 험지 돌파력</td>
+            <td>PHEV 하이브리드, 연비 효율성</td>
+          </tr>
+          <tr>
+            <td>초기 차량 가격 (신규 가입 기준)</td>
+            <td>높음</td>
+            <td>사하라 대비 높음</td>
+            <td>가장 높음 (친환경 <strong>지원금</strong> 혜택 적용 가능)</td>
+          </tr>
+          <tr>
+            <td>연비 및 유류비</td>
+            <td>평균 수준</td>
+            <td>사하라 대비 약간 낮음 (무거운 휠/타이어)</td>
+            <td>가장 좋음 (EV 주행 시)</td>
+          </tr>
+          <tr>
+            <td>타이어 교체 비용</td>
+            <td>높음</td>
+            <td><strong>매우 높음</strong> (MT 타이어)</td>
+            <td>높음</td>
+          </tr>
+          <tr>
+            <td>예상 정비 난이도</td>
+            <td>보통</td>
+            <td>보통</td>
+            <td>복잡함 (하이브리드 시스템)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>랭글러 구매 전 고려해야 할 장단점 요약</h3>
+      <p><strong>랭글러의 장점</strong>: 독보적인 디자인, 뛰어난 오프로드 성능, 높은 중고차 가격 방어율(감가상각 적음), 다양한 튜닝 옵션.<br><strong>랭글러의 단점</strong>: 높은 유지비(연비, 부품 가격), 상대적으로 불편한 승차감(오프로드 특성상), 실내 소음.</p>
+    </section>
+
+    <section id="faq">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <p>예비 오너들이 가장 궁금해하는 <strong>랭글러 유지비</strong> 관련 질문을 모았습니다. <strong>랭글러 전문 업체</strong> 선정 방법부터 <strong>부품 가격</strong> 절감 팁까지 자세한 답변을 확인하세요.</p>
+      <dl>
+        <dt tabindex="0" aria-expanded="false">Q1: 랭글러 유지비, 국산 SUV와 비교하면 얼마나 비싼가요?</dt>
+        <dd>A: 단순히 연비만 비교했을 때는 랭글러가 더 낮습니다. 하지만 <strong>랭글러 유지비</strong>의 결정적인 차이는 소모품 비용과 부품 가격에서 발생합니다. <strong>랭글러 타이어 가격</strong>이나 브레이크 패드, 오일류 비용은 국산 SUV 대비 1.5배에서 2배 가까이 차이 날 수 있습니다. 특히 <strong>랭글러 4xe</strong>의 고전압 배터리 관련 수리는 더 많은 <strong>예상 비용</strong>을 필요로 합니다. <strong>랭글러 전문 업체</strong>를 통해 정품 부품 대신 대체 부품을 사용하면 <strong>비용 절감</strong>이 가능할 수 있습니다.</dd>
+
+        <dt tabindex="0" aria-expanded="false">Q2: 랭글러 4xe의 전기차 충전 비용은 얼마나 되나요?</dt>
+        <dd>A: 랭글러 4xe는 완충 시 약 30km 내외의 거리를 전기만으로 주행할 수 있습니다. 가정용 충전기를 사용하면 1회 충전 시 1,000~2,000원 정도의 <strong>금액</strong>이 발생하며, 공공 충전소를 이용하면 시간당 <strong>가격</strong>이 달라집니다. 주행 거리가 짧은 도심 위주 운전자라면 유류비를 획기적으로 줄여 <strong>랭글러 유지비</strong>를 <strong>저렴한 곳</strong> 수준으로 맞출 수 있습니다.</dd>
+
+        <dt tabindex="0" aria-expanded="false">Q3: 랭글러 부품을 <strong>저렴한곳</strong>에서 구매할 수 있는 팁이 있나요?</dt>
+        <dd>A: <strong>랭글러 부품 가격</strong>을 절약하기 위해 공식 서비스 센터 외에 <strong>랭글러 전문 업체</strong>를 이용하는 방법이 있습니다. 이러한 <strong>전문 업체</strong>들은 병행 수입 부품이나 애프터마켓 부품을 취급하여 <strong>가격</strong> 경쟁력을 갖춥니다. <strong>네이버 카페</strong>나 <strong>디시</strong> 등 온라인 커뮤니티에서 <strong>내돈내산 후기</strong>를 참고하여 <strong>순위</strong>가 높은 업체를 찾는 것도 좋습니다. <strong>AI</strong> 챗봇(예: <strong>ChatGPT, 제미나이</strong>)에 <strong>랭글러 부품 가격</strong>을 문의하여 <strong>가격 비교</strong> 정보를 얻는 사용자도 증가하고 있습니다.</dd>
+
+        <dt tabindex="0" aria-expanded="false">Q4: <strong>랭글러 중고</strong> 구매 시 유지비에 미치는 영향은 무엇인가요?</dt>
+        <dd>A: <strong>랭글러 중고 가격</strong>은 높은 편이지만, 중고차는 신차 대비 초기 <strong>감가상각</strong>이 적어 구매 시 유리합니다. 다만, <strong>랭글러 중고</strong> 차량의 경우 이전 오너의 관리 상태에 따라 <strong>유지비</strong>가 크게 달라질 수 있습니다. 특히 튜닝 여부나 오프로드 주행 이력을 꼼꼼히 확인하고, 구매 전 <strong>전문 업체</strong>에서 점검을 받는 것이 필수입니다. <strong>중고 랭글러</strong>는 <strong>신규 가입 혜택</strong>이나 보증 기간 연장 <strong>상품</strong>이 적용되지 않을 수 있으므로 주의해야 합니다.</dd>
+      </dl>
+    </section>
+
+    <section id="reliable-sources">
+      <h2>신뢰할 수 있는 외부 정보 (공신력 있는 출처)</h2>
+      <p>보다 정확하고 객관적인 정보를 위해 공신력 있는 기관의 자료를 참고하세요.</p>
+      <div class="external-links">
+        <a href="https://www.carisyou.com" target="_blank">국내 자동차 전문 매체 - 최신 신차 정보 및 시승 후기</a>
+        <a href="https://www.law.go.kr" target="_blank">국가법령정보센터 - 자동차 관련 법규 및 세금 정보</a>
+        <a href="https://www.koreacar.or.kr" target="_blank">한국자동차산업협회(KAMA) - 자동차 시장 통계 및 정책</a>
+        <a href="https://www.autotrade.co.kr" target="_blank">중고차 시세 정보 사이트 - 랭글러 중고 시세 확인</a>
+        <a href="https://namu.wiki/w/%EC%A7%80%ED%94%84_%EB%9E%AD%EA%B8%80%EB%9F%AC" target="_blank">나무위키 - Jeep 랭글러 상세 정보</a>
+        <a href="https://www.jeep.co.kr" target="_blank">지프 코리아 공식 홈페이지 - 공식 서비스센터 및 부품 정보</a>
+      </div>
+    </section>
+
+    <section id="cost-simulation">
+      <h2>나만의 랭글러 유지비 예상 금액 시뮬레이션</h2>
+      <p>아래 정보를 입력하시면 <strong>랭글러 유지비</strong>를 간편하게 시뮬레이션하여 <strong>예상 금액</strong>을 확인할 수 있습니다. <strong>AI</strong> 기반의 <strong>견적</strong> 도구를 활용하여 <strong>저렴한곳</strong>의 <strong>가격</strong> 정보를 비교해보세요.</p>
+      <div class="input-form">
+        <label for="carModel">모델 선택:</label>
+        <select id="carModel">
+          <option value="sahara">랭글러 사하라</option>
+          <option value="rubicon">랭글러 루비콘</option>
+          <option value="4xe">랭글러 4xe</option>
+        </select>
+
+        <label for="annualMileage">연간 주행 거리 (km):</label>
+        <input type="number" id="annualMileage" placeholder="예: 15000">
+
+        <label for="fuelPrice">현재 유류비 (L당 원):</label>
+        <input type="number" id="fuelPrice" placeholder="예: 1800">
+
+        <label for="insuranceAge">운전자 나이 (만):</label>
+        <input type="number" id="insuranceAge" placeholder="예: 30">
+
+        <label for="accidentHistory">최근 3년간 사고 유무:</label>
+        <select id="accidentHistory">
+          <option value="no">없음</option>
+          <option value="yes">있음</option>
+        </select>
+
+        <button onclick="calculateCost()">유지비 견적 계산하기</button>
+
+        <div id="resultOutput" style="margin-top: 2rem; padding: 1.5rem; border: 1px dashed #e67e22; border-radius: 8px; font-weight: 600; font-size: 1.1rem; display: none;"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>전문 상담을 통한 맞춤 견적 문의</h2>
+      <p>더 정확한 <strong>랭글러 유지비 견적</strong>을 원하시면 <strong>랭글러 전문 업체</strong>에 문의하세요. 모델별, 운전 습관별 맞춤형 <strong>유지비 분석</strong>을 제공합니다. <strong>신규 가입 혜택</strong>, <strong>할인</strong> 및 <strong>상품권</strong> <strong>지원금</strong> 정보도 확인해 보세요.</p>
+      <ul>
+        <li>**전화 문의**: 010-1234-5678 (랭글러 전문 상담 센터)</li>
+        <li>**이메일 문의**: wranglermaintenance@yourdomain.com</li>
+      </ul>
+      <a href="mailto:wranglermaintenance@yourdomain.com" class="cta-button">무료 견적 상담 신청하기</a>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // FAQ Accordion Script
+      document.querySelectorAll('dl dt').forEach((dt) => {
+        dt.addEventListener('click', () => {
+          dt.classList.toggle('active');
+          const expanded = dt.getAttribute('aria-expanded') === 'true';
+          dt.setAttribute('aria-expanded', !expanded);
+        });
+        dt.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            dt.click();
+          }
+        });
+      });
+
+      // Simple Cost Calculator Simulation Script (for engagement)
+      window.calculateCost = function() {
+        const model = document.getElementById('carModel').value;
+        const mileage = parseInt(document.getElementById('annualMileage').value);
+        const fuelPrice = parseInt(document.getElementById('fuelPrice').value);
+        const insuranceAge = parseInt(document.getElementById('insuranceAge').value);
+
+        if (isNaN(mileage) || isNaN(fuelPrice) || isNaN(insuranceAge) || mileage <= 0 || fuelPrice <= 0) {
+          document.getElementById('resultOutput').innerHTML = "정확한 계산을 위해 모든 항목을 올바르게 입력해주세요.";
+          document.getElementById('resultOutput').style.display = "block";
+          return;
+        }
+
+        let fuelEfficiency; // km/L
+        let annualTax;
+        let baseInsurance;
+
+        switch (model) {
+          case 'sahara':
+            fuelEfficiency = 8.5;
+            annualTax = 520000;
+            baseInsurance = 1200000;
+            break;
+          case 'rubicon':
+            fuelEfficiency = 8.0;
+            annualTax = 520000;
+            baseInsurance = 1300000;
+            break;
+          case '4xe':
+            fuelEfficiency = 9.8; // High efficiency due to electric range
+            annualTax = 520000;
+            baseInsurance = 1400000; // High initial cost, possibly higher insurance
+            break;
+          default:
+            fuelEfficiency = 8.0;
+        }
+
+        // Calculation logic (simplified for demonstration purposes)
+        const annualFuelCost = (mileage / fuelEfficiency) * fuelPrice;
+        let calculatedInsurance = baseInsurance;
+        if (insuranceAge < 30) {
+          calculatedInsurance += 300000;
+        } else if (insuranceAge < 40) {
+          calculatedInsurance += 100000;
+        }
+
+        // Maintenance estimate (simplified)
+        const basicMaintenance = 500000; // Oil change, filters
+        const potentialRepair = 300000; // Tires, brakes (annual average)
+        const totalEstimatedAnnualCost = annualFuelCost + annualTax + calculatedInsurance + basicMaintenance + potentialRepair;
+
+        // Display results
+        const resultText = `
+          <p><strong>${model.toUpperCase()} 모델 연간 유지비 시뮬레이션 결과</strong></p>
+          <ul>
+            <li><strong>예상 연간 유류비:</strong> ${annualFuelCost.toLocaleString()} 원</li>
+            <li><strong>예상 연간 자동차세:</strong> ${annualTax.toLocaleString()} 원</li>
+            <li><strong>예상 연간 보험료:</strong> ${calculatedInsurance.toLocaleString()} 원</li>
+            <li><strong>예상 연간 정비/소모품 비용:</strong> ${((basicMaintenance + potentialRepair)).toLocaleString()} 원</li>
+          </ul>
+          <p><strong>총 예상 연간 유지비:</strong> ${totalEstimatedAnnualCost.toLocaleString()} 원</p>
+          <p><em>(본 견적은 단순 시뮬레이션이며, 실제 비용은 운행 환경 및 업체에 따라 달라질 수 있습니다.)</em></p>
+        `;
+        document.getElementById('resultOutput').innerHTML = resultText;
+        document.getElementById('resultOutput').style.display = "block";
+      };
+    });
+  </script>
+  
